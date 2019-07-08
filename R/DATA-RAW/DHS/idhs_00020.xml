@@ -1,0 +1,1797 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ipums-ddi-xslt.xsl"?>
+<codeBook xmlns="ddi:codebook:2_5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="ddi:codebook:2_5 http://www.ddialliance.org/Specification/DDI-Codebook/2.5/XMLSchema/codebook.xsd" version="2.5" ID="ddi2-139043_idhs_00020.dat-www.idhsdata.org">
+  <docDscr>
+    <citation>
+      <titlStmt>
+        <titl>Codebook for an IPUMS-DHS Data Extract</titl>
+        <subTitl>DDI 2.5 metadata describing the extract file  'idhs_00020.dat'</subTitl>
+        <IDNo>ddi2-139043_idhs_00020.dat-www.idhsdata.org</IDNo>
+      </titlStmt>
+      <rspStmt>
+        <AuthEnty affiliation="University of Minnesota">Minnesota Population Center</AuthEnty>
+      </rspStmt>
+      <prodStmt>
+        <producer abbr="MPC" affiliation="University of Minnesota" role="Documentation">Minnesota Population Center</producer>
+        <prodDate date="2018-10-18">October 18, 2018</prodDate>
+        <prodPlac>Minnesota Population Center, 50 Willey Hall, 225 - 19th Avenue South, Minneapolis, MN 55455</prodPlac>
+      </prodStmt>
+      <distStmt>
+        <contact affiliation="University of Minnesota" URI="http://pop.umn.edu">Minnesota Population Center</contact>
+      </distStmt>
+    </citation>
+  </docDscr>
+  <stdyDscr>
+    <citation>
+      <titlStmt>
+        <titl>User Extract idhs_00020.dat</titl>
+      </titlStmt>
+      <rspStmt>
+        <AuthEnty affiliation="University of Minnesota">Minnesota Population Center</AuthEnty>
+      </rspStmt>
+      <prodStmt>
+        <producer abbr="MPC" affiliation="University of Minnesota" role="Documentation">Minnesota Population Center</producer>
+        <prodDate date="2018-10-18">October 18, 2018</prodDate>
+        <prodPlac>Minnesota Population Center, 50 Willey Hall, 225 - 19th Avenue South, Minneapolis, MN 55455</prodPlac>
+      </prodStmt>
+      <distStmt>
+        <contact affiliation="University of Minnesota" URI="http://pop.umn.edu">Minnesota Population Center</contact>
+      </distStmt>
+      <serStmt>
+        <serName abbr="dhs">IPUMS-DHS</serName>
+        <serInfo>DOI:10.18128/D080.V4.1</serInfo>
+      </serStmt>
+      <verStmt>
+        <version date="2018-10-18"/>
+      </verStmt>
+    </citation>
+    <stdyInfo>
+      <subject>
+        <topcClas vocab="IPUMS">Identifiers Variables -- PERSON</topcClas>
+        <topcClas vocab="IPUMS">Weights and subsample selection Variables -- PERSON</topcClas>
+        <topcClas vocab="IPUMS">Core demographic Variables -- PERSON</topcClas>
+      </subject>
+      <sumDscr ID="sdatref-1">
+        <timePrd event="single" date="1996">1996</timePrd>
+        <nation abbr="bj">Benin</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-2">
+        <timePrd event="single" date="2001">2001</timePrd>
+        <nation abbr="bj">Benin</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-3">
+        <timePrd event="single" date="2006">2006</timePrd>
+        <nation abbr="bj">Benin</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-110">
+        <timePrd event="single" date="2011">2011</timePrd>
+        <nation abbr="bj">Benin</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-4">
+        <timePrd event="single" date="1993">1993</timePrd>
+        <nation abbr="bf">Burkina Faso</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-5">
+        <timePrd event="single" date="1998">1998</timePrd>
+        <nation abbr="bf">Burkina Faso</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-6">
+        <timePrd event="single" date="2003">2003</timePrd>
+        <nation abbr="bf">Burkina Faso</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-108">
+        <timePrd event="single" date="2010">2010</timePrd>
+        <nation abbr="bf">Burkina Faso</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-7">
+        <timePrd event="single" date="1991">1991</timePrd>
+        <nation abbr="cm">Cameroon</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-8">
+        <timePrd event="single" date="1998">1998</timePrd>
+        <nation abbr="cm">Cameroon</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-9">
+        <timePrd event="single" date="2004">2004</timePrd>
+        <nation abbr="cm">Cameroon</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-109">
+        <timePrd event="single" date="2011">2011</timePrd>
+        <nation abbr="cm">Cameroon</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-255">
+        <timePrd event="single" date="2007">2007</timePrd>
+        <nation abbr="cd">Congo (Democratic Republic)</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-256">
+        <timePrd event="single" date="2013">2013</timePrd>
+        <nation abbr="cd">Congo (Democratic Republic)</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-111">
+        <timePrd event="single" date="1994">1994</timePrd>
+        <nation abbr="ci">Cote d'Ivoire</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-112">
+        <timePrd event="single" date="1998">1998</timePrd>
+        <nation abbr="ci">Cote d'Ivoire</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-113">
+        <timePrd event="single" date="2011">2011</timePrd>
+        <nation abbr="ci">Cote d'Ivoire</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-10">
+        <timePrd event="single" date="1988">1988</timePrd>
+        <nation abbr="eg">Egypt</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-11">
+        <timePrd event="single" date="1992">1992</timePrd>
+        <nation abbr="eg">Egypt</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-12">
+        <timePrd event="single" date="1995">1995</timePrd>
+        <nation abbr="eg">Egypt</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-13">
+        <timePrd event="single" date="2000">2000</timePrd>
+        <nation abbr="eg">Egypt</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-14">
+        <timePrd event="single" date="2005">2005</timePrd>
+        <nation abbr="eg">Egypt</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-15">
+        <timePrd event="single" date="2008">2008</timePrd>
+        <nation abbr="eg">Egypt</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-257">
+        <timePrd event="single" date="2014">2014</timePrd>
+        <nation abbr="eg">Egypt</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-16">
+        <timePrd event="single" date="2000">2000</timePrd>
+        <nation abbr="et">Ethiopia</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-17">
+        <timePrd event="single" date="2005">2005</timePrd>
+        <nation abbr="et">Ethiopia</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-18">
+        <timePrd event="single" date="2011">2011</timePrd>
+        <nation abbr="et">Ethiopia</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-783">
+        <timePrd event="single" date="2016">2016</timePrd>
+        <nation abbr="et">Ethiopia</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-19">
+        <timePrd event="single" date="1988">1988</timePrd>
+        <nation abbr="gh">Ghana</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-20">
+        <timePrd event="single" date="1993">1993</timePrd>
+        <nation abbr="gh">Ghana</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-21">
+        <timePrd event="single" date="1998">1998</timePrd>
+        <nation abbr="gh">Ghana</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-22">
+        <timePrd event="single" date="2003">2003</timePrd>
+        <nation abbr="gh">Ghana</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-23">
+        <timePrd event="single" date="2008">2008</timePrd>
+        <nation abbr="gh">Ghana</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-261">
+        <timePrd event="single" date="2014">2014</timePrd>
+        <nation abbr="gh">Ghana</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-24">
+        <timePrd event="single" date="1999">1999</timePrd>
+        <nation abbr="gn">Guinea</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-25">
+        <timePrd event="single" date="2005">2005</timePrd>
+        <nation abbr="gn">Guinea</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-114">
+        <timePrd event="single" date="2012">2012</timePrd>
+        <nation abbr="gn">Guinea</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-26">
+        <timePrd event="single" date="1992">1992</timePrd>
+        <nation abbr="ia">India</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-27">
+        <timePrd event="single" date="1998">1998</timePrd>
+        <nation abbr="ia">India</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-28">
+        <timePrd event="single" date="2005">2005</timePrd>
+        <nation abbr="ia">India</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-825">
+        <timePrd event="single" date="2015">2015</timePrd>
+        <nation abbr="ia">India</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-29">
+        <timePrd event="single" date="1989">1989</timePrd>
+        <nation abbr="ke">Kenya</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-30">
+        <timePrd event="single" date="1993">1993</timePrd>
+        <nation abbr="ke">Kenya</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-31">
+        <timePrd event="single" date="1998">1998</timePrd>
+        <nation abbr="ke">Kenya</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-32">
+        <timePrd event="single" date="2003">2003</timePrd>
+        <nation abbr="ke">Kenya</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-33">
+        <timePrd event="single" date="2008">2008</timePrd>
+        <nation abbr="ke">Kenya</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-271">
+        <timePrd event="single" date="2014">2014</timePrd>
+        <nation abbr="ke">Kenya</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-38">
+        <timePrd event="single" date="1992">1992</timePrd>
+        <nation abbr="mg">Madagascar</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-39">
+        <timePrd event="single" date="1997">1997</timePrd>
+        <nation abbr="mg">Madagascar</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-40">
+        <timePrd event="single" date="2003">2003</timePrd>
+        <nation abbr="mg">Madagascar</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-41">
+        <timePrd event="single" date="2008">2008</timePrd>
+        <nation abbr="mg">Madagascar</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-42">
+        <timePrd event="single" date="1992">1992</timePrd>
+        <nation abbr="mw">Malawi</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-43">
+        <timePrd event="single" date="2000">2000</timePrd>
+        <nation abbr="mw">Malawi</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-44">
+        <timePrd event="single" date="2004">2004</timePrd>
+        <nation abbr="mw">Malawi</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-45">
+        <timePrd event="single" date="2010">2010</timePrd>
+        <nation abbr="mw">Malawi</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-563">
+        <timePrd event="single" date="2016">2016</timePrd>
+        <nation abbr="mw">Malawi</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-46">
+        <timePrd event="single" date="1987">1987</timePrd>
+        <nation abbr="ml">Mali</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-47">
+        <timePrd event="single" date="1995">1995</timePrd>
+        <nation abbr="ml">Mali</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-48">
+        <timePrd event="single" date="2001">2001</timePrd>
+        <nation abbr="ml">Mali</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-49">
+        <timePrd event="single" date="2006">2006</timePrd>
+        <nation abbr="ml">Mali</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-116">
+        <timePrd event="single" date="2012">2012</timePrd>
+        <nation abbr="ml">Mali</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-275">
+        <timePrd event="single" date="1987">1987</timePrd>
+        <nation abbr="ma">Morocco</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-276">
+        <timePrd event="single" date="1992">1992</timePrd>
+        <nation abbr="ma">Morocco</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-277">
+        <timePrd event="single" date="2003">2003</timePrd>
+        <nation abbr="ma">Morocco</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-117">
+        <timePrd event="single" date="1997">1997</timePrd>
+        <nation abbr="mz">Mozambique</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-118">
+        <timePrd event="single" date="2003">2003</timePrd>
+        <nation abbr="mz">Mozambique</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-119">
+        <timePrd event="single" date="2011">2011</timePrd>
+        <nation abbr="mz">Mozambique</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-105">
+        <timePrd event="single" date="1992">1992</timePrd>
+        <nation abbr="ne">Niger</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-106">
+        <timePrd event="single" date="1998">1998</timePrd>
+        <nation abbr="ne">Niger</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-107">
+        <timePrd event="single" date="2006">2006</timePrd>
+        <nation abbr="ne">Niger</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-121">
+        <timePrd event="single" date="2012">2012</timePrd>
+        <nation abbr="ne">Niger</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-57">
+        <timePrd event="single" date="1990">1990</timePrd>
+        <nation abbr="ng">Nigeria</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-58">
+        <timePrd event="single" date="1999">1999</timePrd>
+        <nation abbr="ng">Nigeria</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-59">
+        <timePrd event="single" date="2003">2003</timePrd>
+        <nation abbr="ng">Nigeria</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-60">
+        <timePrd event="single" date="2008">2008</timePrd>
+        <nation abbr="ng">Nigeria</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-122">
+        <timePrd event="single" date="2013">2013</timePrd>
+        <nation abbr="ng">Nigeria</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-282">
+        <timePrd event="single" date="1991">1991</timePrd>
+        <nation abbr="pk">Pakistan</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-283">
+        <timePrd event="single" date="2006">2006</timePrd>
+        <nation abbr="pk">Pakistan</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-284">
+        <timePrd event="single" date="2012">2012</timePrd>
+        <nation abbr="pk">Pakistan</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-61">
+        <timePrd event="single" date="1992">1992</timePrd>
+        <nation abbr="rw">Rwanda</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-62">
+        <timePrd event="single" date="2000">2000</timePrd>
+        <nation abbr="rw">Rwanda</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-63">
+        <timePrd event="single" date="2005">2005</timePrd>
+        <nation abbr="rw">Rwanda</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-64">
+        <timePrd event="single" date="2010">2010</timePrd>
+        <nation abbr="rw">Rwanda</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-566">
+        <timePrd event="single" date="2014">2014</timePrd>
+        <nation abbr="rw">Rwanda</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-72">
+        <timePrd event="single" date="1989">1989</timePrd>
+        <nation abbr="sd">Sudan</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-74">
+        <timePrd event="single" date="1991">1991</timePrd>
+        <nation abbr="tz">Tanzania</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-75">
+        <timePrd event="single" date="1996">1996</timePrd>
+        <nation abbr="tz">Tanzania</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-76">
+        <timePrd event="single" date="1999">1999</timePrd>
+        <nation abbr="tz">Tanzania</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-77">
+        <timePrd event="single" date="2004">2004</timePrd>
+        <nation abbr="tz">Tanzania</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-78">
+        <timePrd event="single" date="2010">2010</timePrd>
+        <nation abbr="tz">Tanzania</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-569">
+        <timePrd event="single" date="2015">2015</timePrd>
+        <nation abbr="tz">Tanzania</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-785">
+        <timePrd event="single" date="1988">1988</timePrd>
+        <nation abbr="tn">Tunisia</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-79">
+        <timePrd event="single" date="1988">1988</timePrd>
+        <nation abbr="ug">Uganda</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-80">
+        <timePrd event="single" date="1995">1995</timePrd>
+        <nation abbr="ug">Uganda</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-81">
+        <timePrd event="single" date="2001">2001</timePrd>
+        <nation abbr="ug">Uganda</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-82">
+        <timePrd event="single" date="2006">2006</timePrd>
+        <nation abbr="ug">Uganda</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-83">
+        <timePrd event="single" date="2011">2011</timePrd>
+        <nation abbr="ug">Uganda</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-834">
+        <timePrd event="single" date="2016">2016</timePrd>
+        <nation abbr="ug">Uganda</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-307">
+        <timePrd event="single" date="1991">1991</timePrd>
+        <nation abbr="ye">Yemen</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-308">
+        <timePrd event="single" date="2013">2013</timePrd>
+        <nation abbr="ye">Yemen</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-84">
+        <timePrd event="single" date="1992">1992</timePrd>
+        <nation abbr="zm">Zambia</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-85">
+        <timePrd event="single" date="1996">1996</timePrd>
+        <nation abbr="zm">Zambia</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-86">
+        <timePrd event="single" date="2001">2001</timePrd>
+        <nation abbr="zm">Zambia</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-87">
+        <timePrd event="single" date="2007">2007</timePrd>
+        <nation abbr="zm">Zambia</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-309">
+        <timePrd event="single" date="2013">2013</timePrd>
+        <nation abbr="zm">Zambia</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-88">
+        <timePrd event="single" date="1988">1988</timePrd>
+        <nation abbr="zw">Zimbabwe</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-89">
+        <timePrd event="single" date="1994">1994</timePrd>
+        <nation abbr="zw">Zimbabwe</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-90">
+        <timePrd event="single" date="1999">1999</timePrd>
+        <nation abbr="zw">Zimbabwe</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-91">
+        <timePrd event="single" date="2005">2005</timePrd>
+        <nation abbr="zw">Zimbabwe</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-92">
+        <timePrd event="single" date="2010">2010</timePrd>
+        <nation abbr="zw">Zimbabwe</nation>
+      </sumDscr>
+      <sumDscr ID="sdatref-572">
+        <timePrd event="single" date="2015">2015</timePrd>
+        <nation abbr="zw">Zimbabwe</nation>
+      </sumDscr>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+      <notes><![CDATA[Additional notes on a sample that is part of this study:  ; regular size
+]]></notes>
+    </stdyInfo>
+    <dataAccs>
+      <useStmt>
+        <confDec required="no"><![CDATA[None]]></confDec>
+        <contact affiliation="Minnesota Population Center" URI="http://www.idhsdata.org">IPUMS-DHS</contact>
+        <citReq><![CDATA[Publications and research reports based on the IPUMS-DHS database must cite it appropriately. The citation should include the following:
+
+Elizabeth Heger Boyle, Miriam King, and Matthew Sobek. IPUMS-Demographic and Health Surveys: Version 4.1 [dataset]. Minnesota Population Center and ICF International, 2017. https://doi.org/10.18128/D080.V4.1
+
+The licensing agreement for use of IPUMS-DHS data requires that users supply us with the title and full citation for any publications, research reports, or educational materials making use of the data or documentation. Please add your citation to the IPUMS bibliography at http://bibliography.ipums.org/.]]></citReq>
+        <conditions><![CDATA[Users of IPUMS-DHS data must agree to abide by the access restrictions and terms of use set forth by the DHS Program: https://dhsprogram.com/data/Access-Instructions.cfm]]></conditions>
+        <disclaimer>The user of the data acknowledges that the original collector of the data, the authorized distributor of the data, and the relevant funding agency bear no responsibility for use of the data or for interpretations or inferences based upon such uses.</disclaimer>
+      </useStmt>
+    </dataAccs>
+    <notes><![CDATA[User-provided description:  all women all samples.]]></notes>
+  </stdyDscr>
+  <fileDscr ID="ExtractData">
+    <fileTxt>
+      <fileName>idhs_00020.dat</fileName>
+      <fileCont>Microdata records</fileCont>
+      <fileStrc type="rectangular">
+      </fileStrc>
+      <fileType charset="ISO-8859-1">ISO-8859-1 data file</fileType>
+      <format>fixed length fields</format>
+      <filePlac>Minnesota Population Center, 50 Willey Hall, 225 - 19th Avenue South, Minneapolis, MN 55455</filePlac>
+    </fileTxt>
+  </fileDscr>
+  <dataDscr>
+    <var ID="SAMPLE" files="ExtractData" name="SAMPLE" intrvl="discrete" dcml="0">
+      <location StartPos="1" width="4" EndPos="4"/>
+      <labl>IPUMS-DHS sample identifier</labl>
+      <txt><![CDATA[SAMPLE identifies the DHS sample from which the case is drawn.  Each sample receives a unique 4-digit code.  The first three digits are ISO/UN codes used in COUNTRY, and the last digit identifies the sample within the country, ordered by survey year.
+
+The related variable SAMPLESTR is a string variable that identifies the DHS sample with the same 4-digit code.]]></txt>
+      <catgry>
+        <catValu>0011</catValu>
+        <labl>Model 2015</labl>
+      </catgry>
+      <catgry>
+        <catValu>0041</catValu>
+        <labl>Afghanistan 2015</labl>
+      </catgry>
+      <catgry>
+        <catValu>0501</catValu>
+        <labl>Bangladesh 1994</labl>
+      </catgry>
+      <catgry>
+        <catValu>0502</catValu>
+        <labl>Bangladesh 1996-97</labl>
+      </catgry>
+      <catgry>
+        <catValu>0503</catValu>
+        <labl>Bangladesh 1999-00</labl>
+      </catgry>
+      <catgry>
+        <catValu>0504</catValu>
+        <labl>Bangladesh 2004</labl>
+      </catgry>
+      <catgry>
+        <catValu>0505</catValu>
+        <labl>Bangladesh 2007</labl>
+      </catgry>
+      <catgry>
+        <catValu>0506</catValu>
+        <labl>Bangladesh 2011</labl>
+      </catgry>
+      <catgry>
+        <catValu>0507</catValu>
+        <labl>Bangladesh 2014</labl>
+      </catgry>
+      <catgry>
+        <catValu>1041</catValu>
+        <labl>Myanmar 2015</labl>
+      </catgry>
+      <catgry>
+        <catValu>1081</catValu>
+        <labl>Burundi 1987</labl>
+      </catgry>
+      <catgry>
+        <catValu>1082</catValu>
+        <labl>Burundi 2010</labl>
+      </catgry>
+      <catgry>
+        <catValu>1161</catValu>
+        <labl>Cambodia 2000</labl>
+      </catgry>
+      <catgry>
+        <catValu>1162</catValu>
+        <labl>Cambodia 2005</labl>
+      </catgry>
+      <catgry>
+        <catValu>1163</catValu>
+        <labl>Cambodia 2010</labl>
+      </catgry>
+      <catgry>
+        <catValu>1164</catValu>
+        <labl>Cambodia 2014</labl>
+      </catgry>
+      <catgry>
+        <catValu>1201</catValu>
+        <labl>Cameroon 1991</labl>
+      </catgry>
+      <catgry>
+        <catValu>1202</catValu>
+        <labl>Cameroon 1998</labl>
+      </catgry>
+      <catgry>
+        <catValu>1203</catValu>
+        <labl>Cameroon 2004</labl>
+      </catgry>
+      <catgry>
+        <catValu>1204</catValu>
+        <labl>Cameroon 2011</labl>
+      </catgry>
+      <catgry>
+        <catValu>1481</catValu>
+        <labl>Chad 1996-97</labl>
+      </catgry>
+      <catgry>
+        <catValu>1482</catValu>
+        <labl>Chad 2004</labl>
+      </catgry>
+      <catgry>
+        <catValu>1483</catValu>
+        <labl>Chad 2014</labl>
+      </catgry>
+      <catgry>
+        <catValu>1801</catValu>
+        <labl>Congo Democratic Republic 2007</labl>
+      </catgry>
+      <catgry>
+        <catValu>1802</catValu>
+        <labl>Congo Democratic Republic 2013-14</labl>
+      </catgry>
+      <catgry>
+        <catValu>2041</catValu>
+        <labl>Benin 1996</labl>
+      </catgry>
+      <catgry>
+        <catValu>2042</catValu>
+        <labl>Benin 2001</labl>
+      </catgry>
+      <catgry>
+        <catValu>2043</catValu>
+        <labl>Benin 2006</labl>
+      </catgry>
+      <catgry>
+        <catValu>2044</catValu>
+        <labl>Benin 2011</labl>
+      </catgry>
+      <catgry>
+        <catValu>2311</catValu>
+        <labl>Ethiopia 2000</labl>
+      </catgry>
+      <catgry>
+        <catValu>2312</catValu>
+        <labl>Ethiopia 2005</labl>
+      </catgry>
+      <catgry>
+        <catValu>2313</catValu>
+        <labl>Ethiopia 2011</labl>
+      </catgry>
+      <catgry>
+        <catValu>2314</catValu>
+        <labl>Ethiopia 2016</labl>
+      </catgry>
+      <catgry>
+        <catValu>2881</catValu>
+        <labl>Ghana 1988</labl>
+      </catgry>
+      <catgry>
+        <catValu>2882</catValu>
+        <labl>Ghana 1993</labl>
+      </catgry>
+      <catgry>
+        <catValu>2883</catValu>
+        <labl>Ghana 1998</labl>
+      </catgry>
+      <catgry>
+        <catValu>2884</catValu>
+        <labl>Ghana 2003</labl>
+      </catgry>
+      <catgry>
+        <catValu>2885</catValu>
+        <labl>Ghana 2008</labl>
+      </catgry>
+      <catgry>
+        <catValu>2886</catValu>
+        <labl>Ghana 2014</labl>
+      </catgry>
+      <catgry>
+        <catValu>3201</catValu>
+        <labl>Guatemala 1987</labl>
+      </catgry>
+      <catgry>
+        <catValu>3202</catValu>
+        <labl>Guatemala 1995</labl>
+      </catgry>
+      <catgry>
+        <catValu>3203</catValu>
+        <labl>Guatemala 2015</labl>
+      </catgry>
+      <catgry>
+        <catValu>3241</catValu>
+        <labl>Guinea 1999</labl>
+      </catgry>
+      <catgry>
+        <catValu>3242</catValu>
+        <labl>Guinea 2005</labl>
+      </catgry>
+      <catgry>
+        <catValu>3243</catValu>
+        <labl>Guinea 2012</labl>
+      </catgry>
+      <catgry>
+        <catValu>3561</catValu>
+        <labl>India 1992-93</labl>
+      </catgry>
+      <catgry>
+        <catValu>3562</catValu>
+        <labl>India 1998-99</labl>
+      </catgry>
+      <catgry>
+        <catValu>3563</catValu>
+        <labl>India 2005-06</labl>
+      </catgry>
+      <catgry>
+        <catValu>3564</catValu>
+        <labl>India 2015-16</labl>
+      </catgry>
+      <catgry>
+        <catValu>3841</catValu>
+        <labl>Cote d'Ivoire 1994</labl>
+      </catgry>
+      <catgry>
+        <catValu>3842</catValu>
+        <labl>Cote d'Ivoire 1998</labl>
+      </catgry>
+      <catgry>
+        <catValu>3843</catValu>
+        <labl>Cote d'Ivoire 2011</labl>
+      </catgry>
+      <catgry>
+        <catValu>4041</catValu>
+        <labl>Kenya 1989</labl>
+      </catgry>
+      <catgry>
+        <catValu>4042</catValu>
+        <labl>Kenya 1993</labl>
+      </catgry>
+      <catgry>
+        <catValu>4043</catValu>
+        <labl>Kenya 1998</labl>
+      </catgry>
+      <catgry>
+        <catValu>4044</catValu>
+        <labl>Kenya 2003</labl>
+      </catgry>
+      <catgry>
+        <catValu>4045</catValu>
+        <labl>Kenya 2008-9</labl>
+      </catgry>
+      <catgry>
+        <catValu>4046</catValu>
+        <labl>Kenya 2014</labl>
+      </catgry>
+      <catgry>
+        <catValu>4261</catValu>
+        <labl>Lesotho 2004</labl>
+      </catgry>
+      <catgry>
+        <catValu>4262</catValu>
+        <labl>Lesotho 2009</labl>
+      </catgry>
+      <catgry>
+        <catValu>4263</catValu>
+        <labl>Lesotho 2014</labl>
+      </catgry>
+      <catgry>
+        <catValu>4501</catValu>
+        <labl>Madagascar 1992</labl>
+      </catgry>
+      <catgry>
+        <catValu>4502</catValu>
+        <labl>Madagascar 1997</labl>
+      </catgry>
+      <catgry>
+        <catValu>4503</catValu>
+        <labl>Madagascar 2003</labl>
+      </catgry>
+      <catgry>
+        <catValu>4504</catValu>
+        <labl>Madagascar 2008</labl>
+      </catgry>
+      <catgry>
+        <catValu>4541</catValu>
+        <labl>Malawi 1992</labl>
+      </catgry>
+      <catgry>
+        <catValu>4542</catValu>
+        <labl>Malawi 2000</labl>
+      </catgry>
+      <catgry>
+        <catValu>4543</catValu>
+        <labl>Malawi 2004</labl>
+      </catgry>
+      <catgry>
+        <catValu>4544</catValu>
+        <labl>Malawi 2010</labl>
+      </catgry>
+      <catgry>
+        <catValu>4545</catValu>
+        <labl>Malawi 2016</labl>
+      </catgry>
+      <catgry>
+        <catValu>4661</catValu>
+        <labl>Mali 1987</labl>
+      </catgry>
+      <catgry>
+        <catValu>4662</catValu>
+        <labl>Mali 1995-6</labl>
+      </catgry>
+      <catgry>
+        <catValu>4663</catValu>
+        <labl>Mali 2001</labl>
+      </catgry>
+      <catgry>
+        <catValu>4664</catValu>
+        <labl>Mali 2006</labl>
+      </catgry>
+      <catgry>
+        <catValu>4665</catValu>
+        <labl>Mali 2012</labl>
+      </catgry>
+      <catgry>
+        <catValu>5041</catValu>
+        <labl>Morocco 1987</labl>
+      </catgry>
+      <catgry>
+        <catValu>5042</catValu>
+        <labl>Morocco 1992</labl>
+      </catgry>
+      <catgry>
+        <catValu>5043</catValu>
+        <labl>Morocco 2003</labl>
+      </catgry>
+      <catgry>
+        <catValu>5081</catValu>
+        <labl>Mozambique 1997</labl>
+      </catgry>
+      <catgry>
+        <catValu>5082</catValu>
+        <labl>Mozambique 2003</labl>
+      </catgry>
+      <catgry>
+        <catValu>5083</catValu>
+        <labl>Mozambique 2011</labl>
+      </catgry>
+      <catgry>
+        <catValu>5161</catValu>
+        <labl>Namibia 1992</labl>
+      </catgry>
+      <catgry>
+        <catValu>5162</catValu>
+        <labl>Namibia 2000</labl>
+      </catgry>
+      <catgry>
+        <catValu>5163</catValu>
+        <labl>Namibia 2006</labl>
+      </catgry>
+      <catgry>
+        <catValu>5164</catValu>
+        <labl>Namibia 2013</labl>
+      </catgry>
+      <catgry>
+        <catValu>5241</catValu>
+        <labl>Nepal 1996</labl>
+      </catgry>
+      <catgry>
+        <catValu>5242</catValu>
+        <labl>Nepal 2001</labl>
+      </catgry>
+      <catgry>
+        <catValu>5243</catValu>
+        <labl>Nepal 2006</labl>
+      </catgry>
+      <catgry>
+        <catValu>5244</catValu>
+        <labl>Nepal 2011</labl>
+      </catgry>
+      <catgry>
+        <catValu>5621</catValu>
+        <labl>Niger 1992</labl>
+      </catgry>
+      <catgry>
+        <catValu>5622</catValu>
+        <labl>Niger 1998</labl>
+      </catgry>
+      <catgry>
+        <catValu>5623</catValu>
+        <labl>Niger 2006</labl>
+      </catgry>
+      <catgry>
+        <catValu>5624</catValu>
+        <labl>Niger 2012</labl>
+      </catgry>
+      <catgry>
+        <catValu>5661</catValu>
+        <labl>Nigeria 1990</labl>
+      </catgry>
+      <catgry>
+        <catValu>5662</catValu>
+        <labl>Nigeria 1999</labl>
+      </catgry>
+      <catgry>
+        <catValu>5663</catValu>
+        <labl>Nigeria 2003</labl>
+      </catgry>
+      <catgry>
+        <catValu>5664</catValu>
+        <labl>Nigeria 2008</labl>
+      </catgry>
+      <catgry>
+        <catValu>5665</catValu>
+        <labl>Nigeria 2013</labl>
+      </catgry>
+      <catgry>
+        <catValu>5861</catValu>
+        <labl>Pakistan 1990-91</labl>
+      </catgry>
+      <catgry>
+        <catValu>5862</catValu>
+        <labl>Pakistan 2006-07</labl>
+      </catgry>
+      <catgry>
+        <catValu>5863</catValu>
+        <labl>Pakistan 2012-13</labl>
+      </catgry>
+      <catgry>
+        <catValu>6041</catValu>
+        <labl>Peru 1991-92</labl>
+      </catgry>
+      <catgry>
+        <catValu>6042</catValu>
+        <labl>Peru 1996</labl>
+      </catgry>
+      <catgry>
+        <catValu>6043</catValu>
+        <labl>Peru 2000</labl>
+      </catgry>
+      <catgry>
+        <catValu>6044</catValu>
+        <labl>Peru 2004-08</labl>
+      </catgry>
+      <catgry>
+        <catValu>6045</catValu>
+        <labl>Peru 2010</labl>
+      </catgry>
+      <catgry>
+        <catValu>6046</catValu>
+        <labl>Peru 2011</labl>
+      </catgry>
+      <catgry>
+        <catValu>6047</catValu>
+        <labl>Peru 2012</labl>
+      </catgry>
+      <catgry>
+        <catValu>6461</catValu>
+        <labl>Rwanda 1992</labl>
+      </catgry>
+      <catgry>
+        <catValu>6462</catValu>
+        <labl>Rwanda 2000</labl>
+      </catgry>
+      <catgry>
+        <catValu>6463</catValu>
+        <labl>Rwanda 2005</labl>
+      </catgry>
+      <catgry>
+        <catValu>6464</catValu>
+        <labl>Rwanda 2010</labl>
+      </catgry>
+      <catgry>
+        <catValu>6465</catValu>
+        <labl>Rwanda 2014</labl>
+      </catgry>
+      <catgry>
+        <catValu>6861</catValu>
+        <labl>Senegal 1986</labl>
+      </catgry>
+      <catgry>
+        <catValu>6862</catValu>
+        <labl>Senegal 1992-93</labl>
+      </catgry>
+      <catgry>
+        <catValu>6863</catValu>
+        <labl>Senegal 1997</labl>
+      </catgry>
+      <catgry>
+        <catValu>6864</catValu>
+        <labl>Senegal 2005</labl>
+      </catgry>
+      <catgry>
+        <catValu>6865</catValu>
+        <labl>Senegal 2010-11</labl>
+      </catgry>
+      <catgry>
+        <catValu>6866</catValu>
+        <labl>Senegal 2012-13</labl>
+      </catgry>
+      <catgry>
+        <catValu>6867</catValu>
+        <labl>Senegal 2014</labl>
+      </catgry>
+      <catgry>
+        <catValu>6868</catValu>
+        <labl>Senegal 2015</labl>
+      </catgry>
+      <catgry>
+        <catValu>6869</catValu>
+        <labl>Senegal 2016</labl>
+      </catgry>
+      <catgry>
+        <catValu>7101</catValu>
+        <labl>South Africa 1998</labl>
+      </catgry>
+      <catgry>
+        <catValu>7161</catValu>
+        <labl>Zimbabwe 1988</labl>
+      </catgry>
+      <catgry>
+        <catValu>7162</catValu>
+        <labl>Zimbabwe 1994</labl>
+      </catgry>
+      <catgry>
+        <catValu>7163</catValu>
+        <labl>Zimbabwe 1999</labl>
+      </catgry>
+      <catgry>
+        <catValu>7164</catValu>
+        <labl>Zimbabwe 2005-6</labl>
+      </catgry>
+      <catgry>
+        <catValu>7165</catValu>
+        <labl>Zimbabwe 2010-11</labl>
+      </catgry>
+      <catgry>
+        <catValu>7166</catValu>
+        <labl>Zimbabwe 2015</labl>
+      </catgry>
+      <catgry>
+        <catValu>7291</catValu>
+        <labl>Sudan 1989-90</labl>
+      </catgry>
+      <catgry>
+        <catValu>7881</catValu>
+        <labl>Tunisia 1988</labl>
+      </catgry>
+      <catgry>
+        <catValu>7921</catValu>
+        <labl>Turkey 1993</labl>
+      </catgry>
+      <catgry>
+        <catValu>7922</catValu>
+        <labl>Turkey 1998</labl>
+      </catgry>
+      <catgry>
+        <catValu>7923</catValu>
+        <labl>Turkey 2003</labl>
+      </catgry>
+      <catgry>
+        <catValu>8001</catValu>
+        <labl>Uganda 1988</labl>
+      </catgry>
+      <catgry>
+        <catValu>8002</catValu>
+        <labl>Uganda 1995</labl>
+      </catgry>
+      <catgry>
+        <catValu>8003</catValu>
+        <labl>Uganda 2001</labl>
+      </catgry>
+      <catgry>
+        <catValu>8004</catValu>
+        <labl>Uganda 2006</labl>
+      </catgry>
+      <catgry>
+        <catValu>8005</catValu>
+        <labl>Uganda 2011</labl>
+      </catgry>
+      <catgry>
+        <catValu>8006</catValu>
+        <labl>Uganda 2016</labl>
+      </catgry>
+      <catgry>
+        <catValu>8181</catValu>
+        <labl>Egypt 1988</labl>
+      </catgry>
+      <catgry>
+        <catValu>8182</catValu>
+        <labl>Egypt 1992</labl>
+      </catgry>
+      <catgry>
+        <catValu>8183</catValu>
+        <labl>Egypt 1995</labl>
+      </catgry>
+      <catgry>
+        <catValu>8184</catValu>
+        <labl>Egypt 2000</labl>
+      </catgry>
+      <catgry>
+        <catValu>8185</catValu>
+        <labl>Egypt 2005</labl>
+      </catgry>
+      <catgry>
+        <catValu>8186</catValu>
+        <labl>Egypt 2008</labl>
+      </catgry>
+      <catgry>
+        <catValu>8187</catValu>
+        <labl>Egypt 2014</labl>
+      </catgry>
+      <catgry>
+        <catValu>8341</catValu>
+        <labl>Tanzania 1991</labl>
+      </catgry>
+      <catgry>
+        <catValu>8342</catValu>
+        <labl>Tanzania 1996</labl>
+      </catgry>
+      <catgry>
+        <catValu>8343</catValu>
+        <labl>Tanzania 1999</labl>
+      </catgry>
+      <catgry>
+        <catValu>8344</catValu>
+        <labl>Tanzania 2004</labl>
+      </catgry>
+      <catgry>
+        <catValu>8345</catValu>
+        <labl>Tanzania 2010</labl>
+      </catgry>
+      <catgry>
+        <catValu>8346</catValu>
+        <labl>Tanzania 2015</labl>
+      </catgry>
+      <catgry>
+        <catValu>8541</catValu>
+        <labl>Burkina Faso 1993</labl>
+      </catgry>
+      <catgry>
+        <catValu>8542</catValu>
+        <labl>Burkina Faso 1998</labl>
+      </catgry>
+      <catgry>
+        <catValu>8543</catValu>
+        <labl>Burkina Faso 2003</labl>
+      </catgry>
+      <catgry>
+        <catValu>8544</catValu>
+        <labl>Burkina Faso 2010</labl>
+      </catgry>
+      <catgry>
+        <catValu>8871</catValu>
+        <labl>Yemen 1991-92</labl>
+      </catgry>
+      <catgry>
+        <catValu>8872</catValu>
+        <labl>Yemen 2013</labl>
+      </catgry>
+      <catgry>
+        <catValu>8941</catValu>
+        <labl>Zambia 1992</labl>
+      </catgry>
+      <catgry>
+        <catValu>8942</catValu>
+        <labl>Zambia 1996</labl>
+      </catgry>
+      <catgry>
+        <catValu>8943</catValu>
+        <labl>Zambia 2001</labl>
+      </catgry>
+      <catgry>
+        <catValu>8944</catValu>
+        <labl>Zambia 2007</labl>
+      </catgry>
+      <catgry>
+        <catValu>8945</catValu>
+        <labl>Zambia 2013</labl>
+      </catgry>
+      <concept vocab="IPUMS">Identifiers Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="COUNTRY" files="ExtractData" name="COUNTRY" intrvl="discrete" dcml="0">
+      <location StartPos="5" width="3" EndPos="7"/>
+      <labl>Country</labl>
+      <txt><![CDATA[COUNTRY reports the country where the survey was fielded. The codes assigned to each country are those used by the UN Statistics Division and the ISO (International Organization for Standardization).]]></txt>
+      <catgry>
+        <catValu>001</catValu>
+        <labl>Model</labl>
+      </catgry>
+      <catgry>
+        <catValu>004</catValu>
+        <labl>Afghanistan</labl>
+      </catgry>
+      <catgry>
+        <catValu>050</catValu>
+        <labl>Bangladesh</labl>
+      </catgry>
+      <catgry>
+        <catValu>104</catValu>
+        <labl>Myanmar</labl>
+      </catgry>
+      <catgry>
+        <catValu>108</catValu>
+        <labl>Burundi</labl>
+      </catgry>
+      <catgry>
+        <catValu>116</catValu>
+        <labl>Cambodia</labl>
+      </catgry>
+      <catgry>
+        <catValu>120</catValu>
+        <labl>Cameroon</labl>
+      </catgry>
+      <catgry>
+        <catValu>148</catValu>
+        <labl>Chad</labl>
+      </catgry>
+      <catgry>
+        <catValu>180</catValu>
+        <labl>Congo Democratic Republic</labl>
+      </catgry>
+      <catgry>
+        <catValu>204</catValu>
+        <labl>Benin</labl>
+      </catgry>
+      <catgry>
+        <catValu>231</catValu>
+        <labl>Ethiopia</labl>
+      </catgry>
+      <catgry>
+        <catValu>288</catValu>
+        <labl>Ghana</labl>
+      </catgry>
+      <catgry>
+        <catValu>320</catValu>
+        <labl>Guatemala</labl>
+      </catgry>
+      <catgry>
+        <catValu>324</catValu>
+        <labl>Guinea</labl>
+      </catgry>
+      <catgry>
+        <catValu>356</catValu>
+        <labl>India</labl>
+      </catgry>
+      <catgry>
+        <catValu>384</catValu>
+        <labl>Cote d'Ivoire</labl>
+      </catgry>
+      <catgry>
+        <catValu>404</catValu>
+        <labl>Kenya</labl>
+      </catgry>
+      <catgry>
+        <catValu>426</catValu>
+        <labl>Lesotho</labl>
+      </catgry>
+      <catgry>
+        <catValu>450</catValu>
+        <labl>Madagascar</labl>
+      </catgry>
+      <catgry>
+        <catValu>454</catValu>
+        <labl>Malawi</labl>
+      </catgry>
+      <catgry>
+        <catValu>466</catValu>
+        <labl>Mali</labl>
+      </catgry>
+      <catgry>
+        <catValu>504</catValu>
+        <labl>Morocco</labl>
+      </catgry>
+      <catgry>
+        <catValu>508</catValu>
+        <labl>Mozambique</labl>
+      </catgry>
+      <catgry>
+        <catValu>516</catValu>
+        <labl>Namibia</labl>
+      </catgry>
+      <catgry>
+        <catValu>524</catValu>
+        <labl>Nepal</labl>
+      </catgry>
+      <catgry>
+        <catValu>562</catValu>
+        <labl>Niger</labl>
+      </catgry>
+      <catgry>
+        <catValu>566</catValu>
+        <labl>Nigeria</labl>
+      </catgry>
+      <catgry>
+        <catValu>586</catValu>
+        <labl>Pakistan</labl>
+      </catgry>
+      <catgry>
+        <catValu>604</catValu>
+        <labl>Peru</labl>
+      </catgry>
+      <catgry>
+        <catValu>646</catValu>
+        <labl>Rwanda</labl>
+      </catgry>
+      <catgry>
+        <catValu>686</catValu>
+        <labl>Senegal</labl>
+      </catgry>
+      <catgry>
+        <catValu>710</catValu>
+        <labl>South Africa</labl>
+      </catgry>
+      <catgry>
+        <catValu>716</catValu>
+        <labl>Zimbabwe</labl>
+      </catgry>
+      <catgry>
+        <catValu>729</catValu>
+        <labl>Sudan</labl>
+      </catgry>
+      <catgry>
+        <catValu>788</catValu>
+        <labl>Tunisia</labl>
+      </catgry>
+      <catgry>
+        <catValu>792</catValu>
+        <labl>Turkey</labl>
+      </catgry>
+      <catgry>
+        <catValu>800</catValu>
+        <labl>Uganda</labl>
+      </catgry>
+      <catgry>
+        <catValu>818</catValu>
+        <labl>Egypt</labl>
+      </catgry>
+      <catgry>
+        <catValu>834</catValu>
+        <labl>Tanzania</labl>
+      </catgry>
+      <catgry>
+        <catValu>854</catValu>
+        <labl>Burkina Faso</labl>
+      </catgry>
+      <catgry>
+        <catValu>887</catValu>
+        <labl>Yemen</labl>
+      </catgry>
+      <catgry>
+        <catValu>894</catValu>
+        <labl>Zambia</labl>
+      </catgry>
+      <concept vocab="IPUMS">Identifiers Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="YEAR" files="ExtractData" name="YEAR" intrvl="discrete" dcml="0">
+      <location StartPos="8" width="4" EndPos="11"/>
+      <labl>Year of sample</labl>
+      <txt><![CDATA[YEAR reports the year when the survey was fielded, as a four-digit variable. In some cases, the DHS was conducted over the course of two years (e.g., Ethiopia 2010-2011), but YEAR always gives a single year.  For full information about the timing of the surveys, please consult the IPUMS-DHS Sample Descriptions page.]]></txt>
+      <catgry>
+        <catValu>1986</catValu>
+        <labl>1986</labl>
+      </catgry>
+      <catgry>
+        <catValu>1987</catValu>
+        <labl>1987</labl>
+      </catgry>
+      <catgry>
+        <catValu>1988</catValu>
+        <labl>1988</labl>
+      </catgry>
+      <catgry>
+        <catValu>1989</catValu>
+        <labl>1989</labl>
+      </catgry>
+      <catgry>
+        <catValu>1990</catValu>
+        <labl>1990</labl>
+      </catgry>
+      <catgry>
+        <catValu>1991</catValu>
+        <labl>1991</labl>
+      </catgry>
+      <catgry>
+        <catValu>1992</catValu>
+        <labl>1992</labl>
+      </catgry>
+      <catgry>
+        <catValu>1993</catValu>
+        <labl>1993</labl>
+      </catgry>
+      <catgry>
+        <catValu>1994</catValu>
+        <labl>1994</labl>
+      </catgry>
+      <catgry>
+        <catValu>1995</catValu>
+        <labl>1995</labl>
+      </catgry>
+      <catgry>
+        <catValu>1996</catValu>
+        <labl>1996</labl>
+      </catgry>
+      <catgry>
+        <catValu>1997</catValu>
+        <labl>1997</labl>
+      </catgry>
+      <catgry>
+        <catValu>1998</catValu>
+        <labl>1998</labl>
+      </catgry>
+      <catgry>
+        <catValu>1999</catValu>
+        <labl>1999</labl>
+      </catgry>
+      <catgry>
+        <catValu>2000</catValu>
+        <labl>2000</labl>
+      </catgry>
+      <catgry>
+        <catValu>2001</catValu>
+        <labl>2001</labl>
+      </catgry>
+      <catgry>
+        <catValu>2002</catValu>
+        <labl>2002</labl>
+      </catgry>
+      <catgry>
+        <catValu>2003</catValu>
+        <labl>2003</labl>
+      </catgry>
+      <catgry>
+        <catValu>2004</catValu>
+        <labl>2004</labl>
+      </catgry>
+      <catgry>
+        <catValu>2005</catValu>
+        <labl>2005</labl>
+      </catgry>
+      <catgry>
+        <catValu>2006</catValu>
+        <labl>2006</labl>
+      </catgry>
+      <catgry>
+        <catValu>2007</catValu>
+        <labl>2007</labl>
+      </catgry>
+      <catgry>
+        <catValu>2008</catValu>
+        <labl>2008</labl>
+      </catgry>
+      <catgry>
+        <catValu>2009</catValu>
+        <labl>2009</labl>
+      </catgry>
+      <catgry>
+        <catValu>2010</catValu>
+        <labl>2010</labl>
+      </catgry>
+      <catgry>
+        <catValu>2011</catValu>
+        <labl>2011</labl>
+      </catgry>
+      <catgry>
+        <catValu>2012</catValu>
+        <labl>2012</labl>
+      </catgry>
+      <catgry>
+        <catValu>2013</catValu>
+        <labl>2013</labl>
+      </catgry>
+      <catgry>
+        <catValu>2014</catValu>
+        <labl>2014</labl>
+      </catgry>
+      <catgry>
+        <catValu>2015</catValu>
+        <labl>2015</labl>
+      </catgry>
+      <catgry>
+        <catValu>2016</catValu>
+        <labl>2016</labl>
+      </catgry>
+      <concept vocab="IPUMS">Identifiers Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="PERWEIGHT" files="ExtractData" name="PERWEIGHT" intrvl="contin" dcml="6">
+      <location StartPos="12" width="8" EndPos="19"/>
+      <labl>Sample weight for persons</labl>
+      <txt><![CDATA[PERWEIGHT (V005) is an 8-digit variable with 6 implied decimal places, which should be used as a weighting factor to produce representative numbers accurately describing the surveyed population.
+
+While the DHS Recode Manuals direct the researcher to divide the original weight variable by 1,000,000 before applying the weighting factor to the original DHS data files, it is not necessary to modify the value of PERWEIGHT before applying this weight to cases in IPUMS-DHS. 
+
+PERWEIGHT should be used to weight nearly all tabulations made using IPUMS-DHS data.  Occasionally, as with the domestic violence variables, a subset of respondents are randomly selected to answer questions from a survey module, and a specialized weight such as DVWEIGHT should be used instead. 
+
+Note: The 6 implied decimal places in PERWEIGHT mean that the last six digits of the eight-digit variable are decimal digits, but there is no actual decimal in the data.]]></txt>
+      <codInstr><![CDATA[PERWEIGHT is an 8-digit numeric variable with 6 implied decimal places.  See the variable description for directions on the use of PERWEIGHT.]]></codInstr>
+      <concept vocab="IPUMS">Weights and subsample selection Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+    <var ID="AGE5YEAR" files="ExtractData" name="AGE5YEAR" intrvl="discrete" dcml="0">
+      <location StartPos="20" width="2" EndPos="21"/>
+      <labl>Age in 5 year groups</labl>
+      <txt><![CDATA[AGE5YEAR (V013) reports the woman's age in 5-year groups, based on data from the AGE (V012) variable. The age range of women interviewed varies across samples. See Comparability.]]></txt>
+      <catgry>
+        <catValu>10</catValu>
+        <labl>10 to 14</labl>
+      </catgry>
+      <catgry>
+        <catValu>11</catValu>
+        <labl>10 to 14</labl>
+      </catgry>
+      <catgry>
+        <catValu>12</catValu>
+        <labl>13-14</labl>
+      </catgry>
+      <catgry>
+        <catValu>20</catValu>
+        <labl>15-19</labl>
+      </catgry>
+      <catgry>
+        <catValu>30</catValu>
+        <labl>20-24</labl>
+      </catgry>
+      <catgry>
+        <catValu>40</catValu>
+        <labl>25-29</labl>
+      </catgry>
+      <catgry>
+        <catValu>50</catValu>
+        <labl>30-34</labl>
+      </catgry>
+      <catgry>
+        <catValu>60</catValu>
+        <labl>35-39</labl>
+      </catgry>
+      <catgry>
+        <catValu>70</catValu>
+        <labl>40-44</labl>
+      </catgry>
+      <catgry>
+        <catValu>80</catValu>
+        <labl>45-49</labl>
+      </catgry>
+      <catgry>
+        <catValu>90</catValu>
+        <labl>50+</labl>
+      </catgry>
+      <catgry>
+        <catValu>91</catValu>
+        <labl>50-54</labl>
+      </catgry>
+      <catgry>
+        <catValu>92</catValu>
+        <labl>55-59</labl>
+      </catgry>
+      <catgry>
+        <catValu>93</catValu>
+        <labl>60-64</labl>
+      </catgry>
+      <concept vocab="IPUMS">Core demographic Variables -- PERSON</concept>
+      <varFormat schema="other" type="numeric"/>
+    </var>
+  </dataDscr>
+</codeBook>

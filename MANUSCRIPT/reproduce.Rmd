@@ -1,0 +1,169 @@
+---
+title: "Replication"
+output: html_document
+---
+
+All scripts required to reproduce the figures and tables in *Population pyramids yield accurate estimates of total fertility rates* are contained below.
+
+```{r echo=FALSE}
+rm(list=ls())
+library(knitr)
+read_chunk('../R/SCRIPTS/load-libraries.R')
+read_chunk('../R/SCRIPTS/load-constants.R')
+read_chunk('../R/SCRIPTS/load-hmd-hfd-data.R')
+read_chunk('../R/SCRIPTS/BayesAnalysis_sample.R')
+read_chunk('../R/SCRIPTS/merge-results.R')
+read_chunk('../R/SCRIPTS/X-IPUMS_bayes.R')
+read_chunk('../R/SCRIPTS/load-nonhuman-data.R')
+read_chunk('../R/SCRIPTS/load-us-county-data.R')
+read_chunk('../R/SCRIPTS/assemble-all-error-summaries.R')
+read_chunk('../R/SCRIPTS/plot-comparisons-over-all-data.R')
+read_chunk('../R/SCRIPTS/plot-nonhuman-estimates.R')
+read_chunk('../R/SCRIPTS/plot-multipanel-summary.R')
+read_chunk('../R/SCRIPTS/plot-us-county-map.R')
+read_chunk('../R/SCRIPTS/plot-errors-by-q5.R')
+read_chunk('../R/SCRIPTS/make-africa-map.R')
+read_chunk('../R/SCRIPTS/plot-historical-hmd-estimates.R')
+read_chunk('../R/SCRIPTS/plot-tfr-by-income.R')
+read_chunk('../R/SCRIPTS/resample-CPS-income-race.R')
+
+```
+# Libraries Required
+
+```{r load-libraries, echo=TRUE, message = FALSE, warning = FALSE, cache=TRUE}
+```
+
+# Load the Constants
+```{r load-constants, echo=TRUE, message = FALSE, warning = FALSE, cache=TRUE}
+```
+
+# Figure 1 and Table 1
+
+Data load and analysis for Figure 1 and Table 1.
+The script "001-LoadCleanHFDHMDData.R" procues the same file and analysis used in the bTFR calculation below and the production of the iTFR, iTFR$^+$, xTFR, and xTFR$^+$ analyses.
+
+## Data load
+Downloaded HFD and HMD datasets on 6 May 2017:
+
+1. from HFD - HFD-exposRR.txt (expos by single yr age, country, year)
+
+2. from HFD - HFD-tfrRR.txt (period TFR by country, year)
+
+3. from HFD - HFD-totbirthsRR.txt (total births by country, year)
+
+4. from HMD - HMD_population.zip (zipped file containing
+               a directory called Population5, which in turn
+               contains files called xxxPopulation5.txt that
+               have Jan 1 pop estimates by 5-yr age group
+               for country xxx)
+
+```{r load-hmd-hfd-data, echo=TRUE, message = FALSE, warning = FALSE, cache=TRUE}
+```
+
+## Bayesian Stan code
+
+> WARNING: The bayesian analysis of the entire HFD/HMD database takes approximately 9 hours to run. Here we show a sample of 2 estimates. Changing the variable `nsmall` will change the number of bayesian estimates.
+
+```{r bayesstan, message = FALSE, warning = FALSE, cache=TRUE}
+```
+
+## Data Analysis
+
+This code will merge the HMD/HFD with the DHS data and calculate the `xTFR` coeffficients.
+
+> Note: This code chunk with pull in Bayesian TFR estimates of the DHS data. Those estimates are produced in the code chunk immediately following this one.
+
+```{r merge-results, message = FALSE, warning = FALSE, cache=TRUE}
+```
+
+## DHS bTFR estimates
+```{r IPUMS_bayes, message = FALSE, warning = FALSE, cache=TRUE}
+```
+
+## Loading in the Non-Human data
+
+```{r load-nonhuman-data, echo=TRUE, message = FALSE, warning = FALSE, cache=TRUE}
+```
+
+## Loading in the US County data
+
+```{r load-us-county-data, echo=TRUE, message = FALSE, warning = FALSE, cache=TRUE}
+```
+
+## Assembling Error summaries over all methods
+
+```{r assemble-all-error-summaries, echo=TRUE, message = FALSE, warning = FALSE, cache=TRUE}
+```
+
+# Analysis of s versus qx
+```{r SAnalysis, echo=TRUE,  message = FALSE, warning = FALSE, cache=TRUE}
+
+# calculate correlation of s=5L0/5 with 
+# 1/(1-qx_const*q5) in Swedish historical data
+# qx_const probably = 0.75
+
+SWE = read.table('../R/DATA-RAW/SWE_fltper_1x1.txt', skip=2,          header=TRUE, stringsAsFactors = FALSE) 
+
+# replace Age with numeric
+SWE$Age = 0:110
+
+radix = 100000
+
+SWE = SWE %>%
+  filter(Age < 5) %>%
+  group_by(Year) %>%
+  summarize(s_obs     = sum(Lx)/(5*radix),
+            q5        = 1-lx[5]/radix,
+            s_approx  = 1-.75*q5)
+
+(s_corr = cor(SWE$s_obs, SWE$s_approx ))
+
+(s_min  = min(SWE$s_obs))
+(s_min_year = SWE$Year[which.min(SWE$s_obs)])
+
+(s_max  = max(SWE$s_obs))
+(s_max_year = SWE$Year[which.max(SWE$s_obs)])
+
+(s_error = (1/SWE$s_approx) / (1/SWE$s_obs))
+
+```
+
+# Figure 1
+```{r plot-comparisons-over-all-data, echo=TRUE, message = FALSE, warning = FALSE, dev = c("png"),dpi=300,fig.cap= paste("**Absolute Error (Births/Woman) in TFR over alternative methods and datasets.** Solid dots are at median Error for each method and dataset. Horizontal bars extend from the 10th-90th percentile of Error. Numbers in parentheses indicate the count of schedules for which it is possible to use each method. Median errors are within 1/10th of a birth across all data sets. \\label{comparison}"), cache=TRUE}
+
+```
+
+# Figure 2
+```{r plot-nonhuman-estimates, echo=TRUE, message = FALSE, warning = FALSE, out.width = "60%", dev = c("png"),dpi=300,fig.align="center", fig.cap= paste("**Fertility estimates for animal populations.** $iTFR$ estimates from nonhuman age-sex distributions. Observed TFR versus $iTFR$ estimates for the species listed in \\autoref{nonhumantable}. Estimates match observations along the 45-degree line; dashed lines represent +/- 10\\% errors.\\label{primates}"), cache=TRUE}
+```
+
+# Figure 3
+```{r plot-multipanel-summary, echo=TRUE, message = FALSE, warning = FALSE, fig.height=6.5,dev = c("png"),dpi=300, fig.cap=paste("**Estimated TFR from Population Pyramids.** Performance of three variants in HFD and DHS data. (a, d, g) use $iTFR$; (b, e, h) use $xTFR$; (c, f, i) use $bTFR$; (a, b, c)  plot estimated TFR against the observed 5-year average TFR. The solid line is $Y=X$, and the dashed lines are $\\pm 10\\%$. (d, e, f) illustrate percent error against population size. The dashed lines represent errors of $\\pm 10\\%$. (g, h, i) plot percent errors against the year in which the population pyramid is observed. (j) plots the distribution of algebraic errors for each method ($est-obs$). (k) plots the distribution of absolute algebraic errors. (l) plots the distribution of absolute percent errors. For all variants, estimates are accurate over many scales and times. \\label{multipanel-summary}"), cache=TRUE} 
+```
+
+# Figure 4
+```{r plot-errors-by-q5, echo=TRUE, message = FALSE, warning = FALSE, dev = c("png"),dpi=300,fig.height = 5.5, fig.cap=paste("**Absolute Percent Errors against $q_5$ values in the HMD and DHS.** We compare the performance of the five variants against observed $q_5$ mortality rates. As $q_5$ values increase, APE also increases in the $iTFR$ and $xTFR$ variants. This is corrected in the $iTFR^+$, $xTFR^+$, and $bTFR$ variants, which incorporate estimated child mortality. \\label{errors-by-q5}"), cache=TRUE}
+```
+
+# Figure 5
+
+> Note: The African 1 sq. km raster data can be downloaded from WorldPop at: http://www.worldpop.org.uk/data/summary/?id=337
+
+```{r make-africa-map, echo=TRUE,  message = FALSE, warning = FALSE,dev = c("png"),dpi=300, fig.cap= paste("**Estimating subnational fertility rates.**  We use the $iTFR^+$ method to estimate subnational total fertility rates for the African continent for 2010-2015 using data from WorldPop and the United Nations WPP 2017.  \\label{WorldPop}"), cache=TRUE}
+
+```
+
+# Figure 6
+```{r plot-historical-hmd-estimates, echo=TRUE,  message = FALSE, warning = FALSE, dev = c("png"),dpi=300,fig.cap= paste("**Estimating historical fertility.**  $bTFR$ estimates of period fertility rates in four European countries using  HMD historical age-sex and child mortality data. Shaded regions represent 90 percent posterior probability intervals; open circles are observed TFRs from the HFD. Red stars are average TFRs over the preceding five-year period for the earliest series with a vital records source from the Human Fertility Collection \\citep{HFC}.\\label{Historic}"), cache=TRUE}
+
+```
+
+# Figure 7
+```{r resample-CPS-income-race, echo=TRUE,  message = FALSE, warning = FALSE, dev = c("png"),dpi=300,fig.cap= paste("**Total Fertility ($xTFR$) by race and household income level.** We estimate TFR from age-sex distributions within race-income categories using the U.S. Current Population Survey (CPS) March Social and Economic Supplements, combined over 2010-2018. White corresponds to those reporting their race as White only; Non-White corresponds to all other survey respondents. Shaded regions represent confidence intervals (5%-95%) estimated from 1000 bootstrap samples in which households in each rae-income category are drawn randomly with replacement from the set of all CPS households. \\label{Income}"), cache=TRUE}
+
+```
+
+
+
+
+

@@ -1,0 +1,9 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+
+**/MANUSCRIPT/reproduce_cache
+**/MANUSCRIPT/reproduce_files
+!/figure-html
