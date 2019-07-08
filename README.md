@@ -1,7 +1,7 @@
 # Population pyramids yield accurate estimates of total fertility rates
 
 # Introduction
-Here we provide the data and code for:  [**Population pyramids yield accurate estimates of total fertility rates**](https://github.com/mathewhauer/iTFR-replication/blob/master/manuscript.pdf)
+Here we provide the data and code for:  [**Population pyramids yield accurate estimates of total fertility rates**](https://github.com/mathewhauer/iTFR-replication/blob/master/MANUSCRIPT/manuscript.pdf)
 
 ### Citation
 
@@ -12,7 +12,7 @@ Here we provide the data and code for:  [**Population pyramids yield accurate es
 # Abstract
 > The primary fertility index for a population, the total fertility rate (TFR), cannot be calculated for many areas and time periods because it requires disaggregation of births by mother’s age. Here we discuss a flexible framework for estimating TFR using inputs as minimal as a population pyramid. We develop five variants, each with increasing complexity and data requirements. To evaluate accuracy we test using more than 2,400 fertility schedules with known TFR values, across a diverse set of data sources --  including the Human Fertility Database, Demographic and Health Surveys, U.S. counties, and nonhuman species. We show that even the simplest and least accurate variant has a median error of only 0.09 births/woman over 2,400 fertility schedules, suggesting accurate TFR estimation over a wide range of demographic conditions. We anticipate that this framework will extend fertility analysis to new subpopulations, time periods, geographies, and even species. To demonstrate the framework's utility in new applications, we produce subnational estimates of African fertility levels, reconstruct historical European TFRs for periods up to 150 years before the collection of detailed birth records, and estimate TFR for the U.S. conditional on race and household income.
 
-![Main Figure](MANUSCRIPT/manuscript_files/figure-latex/plot-multipanel-summary-1.PNG "Main Figure")
+![Main Figure](MANUSCRIPT/manuscript_files/figure-latex/plot-multipanel-summary-1.png "Main Figure")
 
 **Estimated TFR from Population Pyramids.** We compare the performance of five variants against observed TFRs using data from the Human Fertility Data, Demographic and Health Surveys, the US Census Bureau, and various non-human species.
 
