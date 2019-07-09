@@ -16,13 +16,15 @@ Here we provide the data and code for:  [**Population pyramids yield accurate es
 
 **Estimated TFR from Population Pyramids.** We compare the performance of five variants against observed TFRs using data from the Human Fertility Data, Demographic and Health Surveys, the US Census Bureau, and various non-human species.
 
+To see all of the underlying code and the results, [click here](http://htmlpreview.github.io/?https://github.com/mathewhauer/iTFR-replication/blob/master/MANUSCRIPT/reproduce.html)
+
 # Organization
 - `/R/SCRIPTS/`  — Scripts and output for figures included in the main document.
 - `/R/DATA-RAW/`  — Initial data resources, unprocessed.
 - `/R/DATA-PROCESSED/` — Post-processed data for our analysis.
 - `/MANUSCRIPT/manuscript.Rmd` — contains a replication of the manuscript file
 
-- `/MANUSCRIPT/reproduce.html` — contains a replication for underlying estimates.
+- `/MANUSCRIPT/reproduce.Rmd` — contains a replication for underlying estimates.
 - `/R/BayesAnalysis_sample.R` — a sample R script to produce all five variants, including the Bayesian estimates of TFR. (requires Stan)
 - `/R/superfast_bTFRfunction.R` — a sample R script to produce just Bayesian estimates of TFR. Does not require Stan, but use at your own risk.
 
