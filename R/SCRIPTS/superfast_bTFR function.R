@@ -1,7 +1,7 @@
 #------------------------------------------
 # Carl Schmertmann
 # created 07 May 2018
-# edited  07 May 2018
+# edited  10 Jul 2019
 #
 # superfast_bTFR function (does NOT require Stan)
 #
@@ -11,10 +11,10 @@
 #         lowest possible TFR value under consideration (LTFR)
 #         highest possible TFR value under consideration (HTFR)
 #
-# output: if n=1, a single 2-component list containing
+# output: if n=1, a single 4-component list containing
 #            $ a density object for TFR
-#            $ the posterior median of TFR
-#         if n>1, a list of 2-component lists, one per population
+#            $ the 10,50,90%iles of the posterior distribution
+#         if n>1, a list of 4-component lists, one per population
 #------------------------------------------
 
 library(tidyverse)
