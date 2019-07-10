@@ -252,6 +252,8 @@ sample_data <- tribble(
   "Sample Population", 	610003, 	202830, 	185728, 	167675, 	149541, 	131736, 	115088, 	99721, 	0.45, 
 )
 
+# use with a scalar C and vector W15...W45
+#  
 est = superfast_bTFR(C = sample_data$C,
                W = c(sample_data$W15,
                      sample_data$W20,
