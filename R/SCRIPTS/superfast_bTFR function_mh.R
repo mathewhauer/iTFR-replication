@@ -20,22 +20,6 @@
 library(tidyverse)
 library(LearnBayes)
 
-sample_data <- tribble(
-  ~Code, ~C, 	~W15, 	~W20, 	~W25, 	~W30, 	~W35, 	~W40, 	~W45, 	~qx, 
-  "Sample Population", 	610003, 	202830, 	185728, 	167675, 	149541, 	131736, 	115088, 	99721, 	0.45, 
-)
-
-superfast_bTFR(C = sample_data$C,
-               W = c(sample_data$W15,
-                     sample_data$W20,
-                     sample_data$W25,
-                     sample_data$W30,
-                     sample_data$W35,
-                     sample_data$W40,
-                     sample_data$W45),
-               q5_est = sample_data$qx
-)
-
 superfast_bTFR = function(C , W , q5_est , 
                      LTFR = 0, HTFR = 20, delta_TFR=.02,
                      Lq5 = .0001, Hq5  =.0999,
@@ -260,4 +244,25 @@ require(LearnBayes)
 } # superfast_bTFR
 
 
+####### EXAMPLES ###############
+
+
+sample_data <- tribble(
+  ~Code, ~C, 	~W15, 	~W20, 	~W25, 	~W30, 	~W35, 	~W40, 	~W45, 	~qx, 
+  "Sample Population", 	610003, 	202830, 	185728, 	167675, 	149541, 	131736, 	115088, 	99721, 	0.45, 
+)
+
+est = superfast_bTFR(C = sample_data$C,
+               W = c(sample_data$W15,
+                     sample_data$W20,
+                     sample_data$W25,
+                     sample_data$W30,
+                     sample_data$W35,
+                     sample_data$W40,
+                     sample_data$W45),
+               q5_est = sample_data$qx
+)
+
+plot( est$dens)
+abline(v=est$median, lty=2)
 
