@@ -18,6 +18,9 @@ z <- rbind(read_csv("https://www.fertilitydata.org/data/SWE/SWE_TFRMAB_TOT.txt")
   group_by(Country, AgeDef) %>%
   mutate(length = Year2 - Year1 +1,
          lagTFR = if_else(length == 1, mean_lag5(TFR), TFR )) %>%
+  ungroup() %>%
+  group_by(Country) %>%
+  # mutate(minyear = min(Year2)) %>%
   dplyr::select(Code = Country, Year = Year2, HFC = lagTFR) 
 
 results2 <- results %>% 
@@ -28,10 +31,13 @@ results2 <- results %>%
     Code == "FRATNP" ~ "France",
     Code == "ITA" ~ "Italy"
   )) %>%
+  group_by(country) %>%
+  mutate(minyear = min(Year[!is.na(lagTFR)])) %>%
   left_join(., z)
 
 
 ggplot(data = results2) +
+  geom_vline(aes(xintercept =  minyear), linetype = 2) +
   geom_ribbon(aes(x=Year, ymin=Q10, ymax=Q90), fill = "gray", alpha=0.6) +
   geom_line(aes(x=Year, y = post_mean, linetype = "bTFR")) +
   geom_point(aes(x=Year, y = lagTFR, shape = "Observed", color = "Observed"), alpha= 0.3, size =2) +

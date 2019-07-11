@@ -60,10 +60,10 @@
   \title{\bf Population pyramids yield accurate estimates of total fertility rates}
 
   \author{
-        Mathew E. Hauer \thanks{Data and code for reproducing this analysis are available in a public
-online repository. We thank A. Bronikowski, R. Lawler, and S. Alberts
-for their assistance with their primate data, and B. Jarosz and K.
-Devivo for feedback on earlier versions. Thanks y'all!} \\
+        Mathew E. Hauer \thanks{The location of all data and code for reproducing this analysis are
+available in Section 6. We thank A. Bronikowski, R. Lawler, and S.
+Alberts for their assistance with their primate data, and B. Jarosz and
+K. Devivo for feedback on earlier versions. Thanks y'all!} \\
     Department of Sociology, Florida State University\\
      and \\     Carl P. Schmertmann \\
     Department of Economics, Florida State University\\
@@ -504,11 +504,11 @@ and
 are constants derived from empirical data and \(\beta\) are unknown
 shape
 parameters.\footnote{The highest values in $m$ correspond to age groups $[20,25)$ and $[25,30)$, so that those age groups represent the highest shares of lifetime fertility. Because the first column of $X$ has monotonically increasing values, the first element of $\beta$ affects the mean age of childbearing: higher values raise the log odds of late relative to early fertility. Similarly, the second element of $\beta$ affects the variance of age-specific fertility, with higher $\beta_2$ causing higher concentration of fertility in the 20s and lower variance.}
-See \citep{schmertmann2019bayesian} for details. When combined with a
-prior distribution \(\beta\sim N(0,I_2)\) this model assigns higher
-prior probabilities to fertility age patterns that are more similar to
-those in the HFD and the U.S. Census Bureau's International Database
-\citep{CensusIDB}.
+See Schmertmann and Hauer \citeyearpar{schmertmann2019bayesian} for
+details. When combined with a prior distribution \(\beta\sim N(0,I_2)\)
+this model assigns higher prior probabilities to fertility age patterns
+that are more similar to those in the HFD and the U.S. Census Bureau's
+International Database \citep{CensusIDB}.
 
 We use an uninformative prior for \(TFR\):
 \(TFR\sim \text{Uniform}(0,20)\). This allows the level of total
@@ -755,8 +755,7 @@ with suspected high mortality.
 methods and datasets.} Solid dots are at median Error for each method
 and dataset. Horizontal bars extend from the 10th-90th percentile of
 Error. Numbers in parentheses indicate the count of schedules for which
-it is possible to use each method. Median errors are within 1/10th of a
-birth across all data sets. \label{comparison}}
+it is possible to use each method. \label{comparison}}
 \end{figure}
 
 \begin{figure}
@@ -963,8 +962,9 @@ years ago.
 period fertility rates in four European countries using HMD historical
 age-sex and child mortality data. Shaded regions represent 90 percent
 posterior probability intervals; open circles are observed TFRs from the
-HFD. Red stars are average TFRs over the preceding five-year period for
-the earliest series with a vital records source from the Human Fertility
+HFD; vertical dashed lines refer to the earliest data in the HFD. Red
+stars are average TFRs over the preceding five-year period for the
+earliest series with a vital records source from the Human Fertility
 Collection \citep{HFC}.\label{Historic}}
 \end{figure}
 
@@ -1005,7 +1005,7 @@ and Economic Supplements, combined over 2010-2018. White corresponds to
 those reporting their race as White only; Non-White corresponds to all
 other survey respondents. Shaded regions represent confidence intervals
 (5\%-95\%) estimated from 1000 bootstrap samples in which households in
-each rae-income category are drawn randomly with replacement from the
+each race-income category are drawn randomly with replacement from the
 set of all CPS households. \label{Income}}
 \end{figure}
 
@@ -1084,47 +1084,6 @@ replication repository located at
 were performed in \emph{R} \citep{rcite}. For the \(bTFR\) variant we
 use the \emph{rstan} package \citep{rstanpackage} to inferface with Stan
 \citep{stanjss2017}.
-
-\newpage
-
-\hypertarget{supplementary-material}{%
-\section*{Supplementary material}\label{supplementary-material}}
-\addcontentsline{toc}{section}{Supplementary material}
-
-\setcounter{table}{0} \renewcommand{\thetable}{S\arabic{table}}\setcounter{figure}{0} \renewcommand{\thefigure}{S\arabic{figure}}
-
-\begin{table}[H]
-
-\caption{\label{tab:make-table-hfd-countries}\label{HFDCountries}\textbf{Human Fertility Database Countries and years of data availability.}}
-\centering
-\begin{tabular}{llll}
-\toprule
-Country & Data Avail. (\# of Years) & Country & Data Avail. (\# of Years)\\
-\midrule
-Austria & 1951-2014 (64) & Iceland & 1960-2012 (53)\\
-Bulgaria & 1947-2009 (63) & Italy & 1954-2014 (61)\\
-Belarus & 1964-2014 (51) & Japan & 1947-2014 (68)\\
-Canada & 1921-2011 (91) & Lithuania & 1959-2014 (56)\\
-Switzerland & 1932-2014 (83) & Netherlands & 1950-2014 (65)\\
-\addlinespace
-Chile & 1992-2005 (14) & Norway & 1967-2014 (48)\\
-Czechia & 1950-2014 (65) & Poland & 1971-2014 (44)\\
-Germany & 1956-2013 (58) & Portugal & 1940-2015 (76)\\
-Spain & 1922-2014 (93) & Russia & 1959-2014 (56)\\
-Estonia & 1959-2014 (56) & Slovakia & 1950-2009 (60)\\
-\addlinespace
-Finland & 1939-2015 (77) & Slovenia & 1983-2014 (32)\\
-France & 1946-2015 (70) & Sweden & 1891-2014 (124)\\
-Northern Ireland & 1974-2014 (41) & Taiwan & 1976-2014 (39)\\
-Scotland & 1945-2014 (70) & Ukraine & 1959-2013 (55)\\
-England and Wales & 1938-2014 (77) & USA & 1933-2015 (83)\\
-\addlinespace
-Hungary & 1950-2014 (65) &  & \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\newpage
 
 \bibliographystyle{agsm}
 \bibliography{mybibfile}

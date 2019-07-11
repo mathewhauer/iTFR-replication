@@ -1,0 +1,139 @@
+---
+title: "Supplementary Materials"
+subtitle: 'Population Pyramids Yield Accurate Estimates of Total Fertility Rates'
+author: 
+- Mathew E. Hauer
+- Carl P. Schmertmann
+output: pdf_document
+header-includes:
+  - \usepackage{amsmath}
+  - \usepackage{amsfonts}
+  - \usepackage{booktabs}
+  - \usepackage{makecell}
+  - \usepackage[usenames, dvipsnames]{color}
+  - \usepackage{multirow}
+  - \usepackage{comment}
+  - \usepackage{booktabs}
+  - \usepackage{longtable}
+  - \usepackage{array}
+  - \usepackage{wrapfig}
+  - \usepackage{float}
+  - \usepackage{colortbl}
+  - \usepackage{pdflscape}
+  - \usepackage{tabu}
+  - \usepackage{threeparttable}
+  - \usepackage{threeparttablex}
+  - \usepackage[normalem]{ulem}
+  - \usepackage{xcolor}
+  - \newcommand{\beginsupplement}{\setcounter{table}{0} \renewcommand{\thetable}{S\arabic{table}}\setcounter{figure}{0} \renewcommand{\thefigure}{S\arabic{figure}}}
+---
+
+```{r setup, include=FALSE}
+
+rm( list=ls() )
+knitr::opts_chunk$set(echo  = TRUE)
+# knitr::opts_chunk$set(cache = TRUE)
+
+
+# read_chunk loads script files and
+# creates labels so that they can be 
+# used later in the program
+#
+# each script file starts with a line
+# like 
+#   ## @knitr libraries
+# that creates a label matching the
+# script's filename
+
+library(knitr)
+read_chunk('../R/SCRIPTS/load-libraries.R')
+read_chunk('../R/SCRIPTS/load-constants.R')
+read_chunk('../R/SCRIPTS/load-hmd-hfd-data.R')
+read_chunk('../R/SCRIPTS/merge-results.R')
+read_chunk('../R/SCRIPTS/load-nonhuman-data.R')
+read_chunk('../R/SCRIPTS/load-us-county-data.R')
+read_chunk('../R/SCRIPTS/assemble-all-error-summaries.R')
+read_chunk('../R/SCRIPTS/plot-comparisons-over-all-data.R')
+read_chunk('../R/SCRIPTS/plot-nonhuman-estimates.R')
+read_chunk('../R/SCRIPTS/plot-multipanel-summary.R')
+read_chunk('../R/SCRIPTS/plot-us-county-map.R')
+read_chunk('../R/SCRIPTS/plot-errors-by-q5.R')
+read_chunk('../R/SCRIPTS/plot-historical-hmd-estimates.R')
+read_chunk('../R/SCRIPTS/plot-tfr-by-income.R')
+read_chunk('../R/SCRIPTS/resample-CPS-income-race.R')
+
+```
+
+
+```{r load-libraries, include=FALSE}
+```
+
+```{r load-constants, include=FALSE}
+```
+
+```{r load-hmd-hfd-data, include=FALSE}
+```
+
+
+\beginsupplement
+
+
+```{r make-table-hfd-countries, echo=FALSE, warning=FALSE, message = FALSE, results='asis'}
+
+# options(knitr.kable.NA = '')
+hfdcountries <- tribble(
+  ~Code, ~Country,
+  "AUT", "Austria",
+  "BGR", "Bulgaria",
+  "BLR", "Belarus",
+  "CAN", "Canada",
+  "CHL", "Chile",
+  "HRV", "Croatia",
+  "CZE", "Czechia",
+  "DEN", "Denmark",
+  "EST", "Estonia",
+  "FIN", "Finland",
+  "FRATNP", "France",
+  "DEUTNP", "Germany",
+  "HUN", "Hungary",
+  "ISL", "Iceland",
+  "ITA", "Italy",
+  "JPN", "Japan",
+  "LTU", "Lithuania",
+  "NLD", "Netherlands",
+  "NOR", "Norway",
+  "POL", "Poland",
+  "PRT", "Portugal",
+  "RUS", "Russia",
+  "SVK", "Slovakia",
+  "SVN", "Slovenia",
+  "ESP", "Spain",
+  "SWE", "Sweden",
+  "CHE", "Switzerland",
+  "TWN", "Taiwan",
+  "UKR", "Ukraine",
+  "GBRTENW", "England and Wales",
+  "GBR_NIR", "Northern Ireland",
+  "GBR_SCO", "Scotland",
+  "USA", "USA"
+)
+
+
+hmdtab <- HFD_tfr  %>%
+  group_by(Code) %>%
+  dplyr::summarise(Start = min(Year),
+                   End = max(Year),
+                   yearlength = n()) %>%
+  left_join(., hfdcountries)
+hmdtab2 <- hmdtab %>%
+  mutate(`Data Avail. (# of Years)` = paste0(Start, "-", End, " (", yearlength,")")) %>%
+  dplyr::select(Country,`Data Avail. (# of Years)` )
+
+hmdtab2[nrow(hmdtab2)+1,] <- ""
+
+dd2 <- cbind(hmdtab2[1:16, ], hmdtab2[17:32, ])
+
+kable(dd2, "latex", booktabs = T, caption = "\\label{HFDCountries}\\textbf{Human Fertility Database Countries and years of data availability.}") %>%
+  kable_styling(latex_options = "HOLD_position")
+  
+```
