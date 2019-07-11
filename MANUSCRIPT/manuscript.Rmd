@@ -6,7 +6,7 @@ blinded: 0
 
 authors: 
 - name: Mathew E. Hauer
-  thanks: Data and code for reproducing this analysis are available in a public online repository. We thank A. Bronikowski, R. Lawler, and S. Alberts for their assistance with their primate data, and B. Jarosz and K. Devivo for feedback on earlier versions. Thanks y'all!
+  thanks: The location of all data and code for reproducing this analysis are available in Section 6. We thank A. Bronikowski, R. Lawler, and S. Alberts for their assistance with their primate data, and B. Jarosz and K. Devivo for feedback on earlier versions. Thanks y'all!
   affiliation: Department of Sociology, Florida State University
   
 - name: Carl P. Schmertmann
@@ -323,7 +323,7 @@ The proportion of lifetime fertility experienced by women in the five years befo
 In order to model this uncertainty we decompose the fertility schedule for 5-year age groups into level and shape components, $(F_{15},...,F_{45})= \frac{TFR}{5} \cdot (\phi_{15},...,\phi_{45})$. 
 As in [@schmertmann2019bayesian] we model the proportions $\phi_{15}...\phi_{45}$ in terms of log odds,  $\gamma_{a}=\ln(\frac{\phi_a}{\phi_{15}})$ for $a=15...45$ and then translate as $\phi_a(\gamma)= \frac{\exp(\gamma_{a})}{\sum_{z}\exp(\gamma_{z})}$. By construction, these seven $\phi_a$ values are positive and sum to one.
 
-Our model for the $\gamma$ indices is $\gamma=m+X\beta$ where $m=(\begin{smallmatrix} 0 &1.39 &1.59 &1.23 &0.45 &-0.89 &-3.44\end{smallmatrix})^\prime$ and $X= \left(\begin{smallmatrix}0 & 0.27 & 0.54 & 0.73 & 0.88 & 1.04 & 1.52\\0 & 0.32 & 0.51 & 0.51 & 0.35 & 0.05 & -0.72 \end{smallmatrix}\right)^{\prime}$ are constants derived from empirical data and $\beta$ are unknown shape parameters.\footnote{The highest values in $m$ correspond to age groups $[20,25)$ and $[25,30)$, so that those age groups represent the highest shares of lifetime fertility. Because the first column of $X$ has monotonically increasing values, the first element of $\beta$ affects the mean age of childbearing: higher values raise the log odds of late relative to early fertility. Similarly, the second element of $\beta$ affects the variance of age-specific fertility, with higher $\beta_2$ causing higher concentration of fertility in the 20s and lower variance.}  See [@schmertmann2019bayesian] for details. When combined with a prior distribution $\beta\sim N(0,I_2)$ this model assigns higher prior probabilities to fertility age patterns that are more similar to those in the HFD and the U.S. Census Bureau's International Database [@CensusIDB]. 
+Our model for the $\gamma$ indices is $\gamma=m+X\beta$ where $m=(\begin{smallmatrix} 0 &1.39 &1.59 &1.23 &0.45 &-0.89 &-3.44\end{smallmatrix})^\prime$ and $X= \left(\begin{smallmatrix}0 & 0.27 & 0.54 & 0.73 & 0.88 & 1.04 & 1.52\\0 & 0.32 & 0.51 & 0.51 & 0.35 & 0.05 & -0.72 \end{smallmatrix}\right)^{\prime}$ are constants derived from empirical data and $\beta$ are unknown shape parameters.\footnote{The highest values in $m$ correspond to age groups $[20,25)$ and $[25,30)$, so that those age groups represent the highest shares of lifetime fertility. Because the first column of $X$ has monotonically increasing values, the first element of $\beta$ affects the mean age of childbearing: higher values raise the log odds of late relative to early fertility. Similarly, the second element of $\beta$ affects the variance of age-specific fertility, with higher $\beta_2$ causing higher concentration of fertility in the 20s and lower variance.}  See Schmertmann and Hauer [-@schmertmann2019bayesian] for details. When combined with a prior distribution $\beta\sim N(0,I_2)$ this model assigns higher prior probabilities to fertility age patterns that are more similar to those in the HFD and the U.S. Census Bureau's International Database [@CensusIDB]. 
 
 We use an uninformative prior for $TFR$: $TFR\sim \text{Uniform}(0,20)$. This allows the level of total fertility to be determined almost completely by the data, rather than by prior assumptions.
 
@@ -500,11 +500,11 @@ There is one important exception to the general "fancier is better" rule. In pop
 This leads to one important caveat. If mortality estimates are unavailable, then $iTFR$ is preferable to $xTFR$ in a population with suspected high mortality. 
 
 
-```{r plot-comparisons-over-all-data, echo=FALSE, message = FALSE, warning = FALSE, dev = c("png"),dpi=300,fig.cap= paste("**Absolute Error (Births/Woman) in TFR over alternative methods and datasets.** Solid dots are at median Error for each method and dataset. Horizontal bars extend from the 10th-90th percentile of Error. Numbers in parentheses indicate the count of schedules for which it is possible to use each method. Median errors are within 1/10th of a birth across all data sets. \\label{comparison}")}
+```{r plot-comparisons-over-all-data, echo=FALSE, message = FALSE, warning = FALSE, dev = c("png", "pdf"),dpi=300,fig.cap= paste("**Absolute Error (Births/Woman) in TFR over alternative methods and datasets.** Solid dots are at median Error for each method and dataset. Horizontal bars extend from the 10th-90th percentile of Error. Numbers in parentheses indicate the count of schedules for which it is possible to use each method. \\label{comparison}")}
 
 ```
 
-```{r plot-nonhuman-estimates, echo=FALSE, message = FALSE, warning = FALSE, out.width = "60%", dev = c("png"),dpi=300,fig.align="center", fig.cap= paste("\\textbf{Fertility estimates for animal populations}. $iTFR$ estimates from nonhuman age-sex distributions. Observed TFR versus $iTFR$ estimates for the species listed in \\autoref{nonhumantable}. Estimates match observations along the 45-degree line; dashed lines represent +/- 10\\% errors.\\label{primates}")}
+```{r plot-nonhuman-estimates, echo=FALSE, message = FALSE, warning = FALSE, out.width = "60%", dev = c("png", "pdf"),dpi=300,fig.align="center", fig.cap= paste("\\textbf{Fertility estimates for animal populations}. $iTFR$ estimates from nonhuman age-sex distributions. Observed TFR versus $iTFR$ estimates for the species listed in \\autoref{nonhumantable}. Estimates match observations along the 45-degree line; dashed lines represent +/- 10\\% errors.\\label{primates}")}
 ```
 
 
@@ -515,7 +515,7 @@ To test the generalizability of the method, we examine the accuracy of the $iTFR
 
 ## Sensitivity to TFR Level, Population Size, and Time Period
 
-```{r plot-multipanel-summary, echo=FALSE, message = FALSE, warning = FALSE, fig.height=6.5,dev = c("png"),dpi=300, fig.cap=paste("**Estimated TFR from Population Pyramids.** Performance of three variants in HFD and DHS data. (a, d, g) use $iTFR$; (b, e, h) use $xTFR$; (c, f, i) use $bTFR$; (a, b, c)  plot estimated TFR against the observed 5-year average TFR. The solid line is $Y=X$, and the dashed lines are $\\pm 10\\%$. (d, e, f) illustrate percent error against population size. The dashed lines represent errors of $\\pm 10\\%$. (g, h, i) plot percent errors against the year in which the population pyramid is observed. (j) plots the distribution of algebraic errors for each method ($est-obs$). (k) plots the distribution of absolute algebraic errors. (l) plots the distribution of absolute percent errors. For all variants, estimates are accurate over many scales and times. \\label{multipanel-summary}")} 
+```{r plot-multipanel-summary, echo=FALSE, message = FALSE, warning = FALSE, fig.height=6.5,dev = c("png", "pdf"),dpi=300, fig.cap=paste("**Estimated TFR from Population Pyramids.** Performance of three variants in HFD and DHS data. (a, d, g) use $iTFR$; (b, e, h) use $xTFR$; (c, f, i) use $bTFR$; (a, b, c)  plot estimated TFR against the observed 5-year average TFR. The solid line is $Y=X$, and the dashed lines are $\\pm 10\\%$. (d, e, f) illustrate percent error against population size. The dashed lines represent errors of $\\pm 10\\%$. (g, h, i) plot percent errors against the year in which the population pyramid is observed. (j) plots the distribution of algebraic errors for each method ($est-obs$). (k) plots the distribution of absolute algebraic errors. (l) plots the distribution of absolute percent errors. For all variants, estimates are accurate over many scales and times. \\label{multipanel-summary}")} 
 ```
 
 **\autoref{multipanel-summary}** reports the accuracy of $iTFR$, $xTFR$, and $bTFR$ estimators for the HFD/HMD and DHS data combined for different levels of TFR, different population sizes, and different historical periods. **\autoref{error-table}** reports summary measures of the accuracy for all five estimators using the same combined HFD/HMD and DHS data as well as U.S. counties. Overall, we find good agreement between estimated and observed TFRs for all five estimators (**\autoref{multipanel-summary}**, a, b, c and **\autoref{error-table}**.
@@ -541,7 +541,7 @@ It is possible that coefficients derived at the National level could prove ineff
 
 ## Sensitivity to Child Mortality
 
-```{r plot-errors-by-q5, echo=FALSE, message = FALSE, warning = FALSE, dev = c("png"),dpi=300,fig.height = 5.5, fig.cap=paste("**Absolute Percent Errors against $q_5$ values in the HMD and DHS.** We compare the performance of the five variants against observed $q_5$ mortality rates. As $q_5$ values increase, APE also increases in the $iTFR$ and $xTFR$ variants. This is corrected in the $iTFR^+$, $xTFR^+$, and $bTFR$ variants, which incorporate estimated child mortality. \\label{errors-by-q5}")}
+```{r plot-errors-by-q5, echo=FALSE, message = FALSE, warning = FALSE, dev = c("png", "pdf"),dpi=300,fig.height = 5.5, fig.cap=paste("**Absolute Percent Errors against $q_5$ values in the HMD and DHS.** We compare the performance of the five variants against observed $q_5$ mortality rates. As $q_5$ values increase, APE also increases in the $iTFR$ and $xTFR$ variants. This is corrected in the $iTFR^+$, $xTFR^+$, and $bTFR$ variants, which incorporate estimated child mortality. \\label{errors-by-q5}")}
 ```
 
 Our derivations for the $iTFR$ and $xTFR$ assume that child mortality is negligible, and those estimators are likely to underestimate fertility when it is not. 
@@ -557,7 +557,7 @@ Accurate estimation of $TFR$ from age-sex pyramids greatly expands our ability t
 
 We use data from WorldPop's gridded population age-structure data for the year 2015 [@tatem2013millennium] in conjunction with $q_5$ estimates from the United Nations World Population Prospects 2017 [@united2017world] to produce subnational estimates of $iTFR^+$ for Africa. Scholars have increasingly published subnational estimates of demographic indicators to monitor progress towards the UN's Sustainable Development Goals (SDGs) [@osgood2018mapping;@golding2017mapping;@graetz2018mapping] and our framework allows a nearly unprecedented level of geographic detail regarding fertility (**\autoref{WorldPop}**). 
 
-```{r plot-africa-map, echo=FALSE,  message = FALSE, warning = FALSE,dev = c("png"),dpi=300, fig.cap= paste("**Estimating subnational fertility rates.**  We use the $iTFR^+$ method to estimate subnational total fertility rates for the African continent for 2010-2015 using data from WorldPop and the United Nations WPP 2017.  \\label{WorldPop}")}
+```{r plot-africa-map, echo=FALSE,  message = FALSE, warning = FALSE,dev = c("png", "pdf"),dpi=300, fig.cap= paste("**Estimating subnational fertility rates.**  We use the $iTFR^+$ method to estimate subnational total fertility rates for the African continent for 2010-2015 using data from WorldPop and the United Nations WPP 2017.  \\label{WorldPop}")}
 
 ## the map is generated by make-africa-map.R,
 ## run before markdown because it takes a
@@ -572,7 +572,7 @@ ggdraw() + draw_image(iTFRafrica)
 
 We also extend our analysis of the Human Mortality Database by producing fertility estimates for all `r nrow(read.csv('../R/DATA-PROCESSED/HMDHFD-allbTFR_06172017.csv'))` country-years of data in the HMD (an additional 1000 country-years' of estimates prior to the collection of detailed birth records). From this large historic volume of data, we highlight our findings in four example countries: France, Italy, the Netherlands, and Sweden (**\autoref{Historic}**). Sweden began tabulating the detailed birth records necessary for $TFR$ calculation in 1891, France in 1946, the Netherlands 1950, and Italy in 1954. However, these countries collected both mortality and age-sex data considerably earlier (1751 for Sweden, 1816 for France, 1850 for the Netherlands, and 1872 for Italy). By using the $bTFR$ method, we can reconstruct historical TFRs to create a time series of fertility data well before age-specific birth collection began, significantly expanding our ability to explore historical fertility patterns from up to 250 years ago.
 
-```{r plot-historical-hmd-estimates, echo=FALSE,  message = FALSE, warning = FALSE, dev = c("png"),dpi=300,fig.cap= paste("**Estimating historical fertility.**  $bTFR$ estimates of period fertility rates in four European countries using  HMD historical age-sex and child mortality data. Shaded regions represent 90 percent posterior probability intervals; open circles are observed TFRs from the HFD. Red stars are average TFRs over the preceding five-year period for the earliest series with a vital records source from the Human Fertility Collection \\citep{HFC}.\\label{Historic}")}
+```{r plot-historical-hmd-estimates, echo=FALSE,  message = FALSE, warning = FALSE, dev = c("png", "pdf"),dpi=300,fig.cap= paste("**Estimating historical fertility.**  $bTFR$ estimates of period fertility rates in four European countries using HMD historical age-sex and child mortality data. Shaded regions represent 90 percent posterior probability intervals; open circles are observed TFRs from the HFD; vertical dashed lines refer to the earliest data in the HFD. Red stars are average TFRs over the preceding five-year period for the earliest series with a vital records source from the Human Fertility Collection \\citep{HFC}.\\label{Historic}")}
 
 ```
 
@@ -608,7 +608,7 @@ Here we provide these examples only as a proof of concept: indirect fertility es
 
 ```
 
-```{r resample-CPS-income-race, echo=FALSE,  message = FALSE, warning = FALSE, dev = c("png"),dpi=300,fig.cap= paste("**Total Fertility ($xTFR$) by race and household income level.** We estimate TFR from age-sex distributions within race-income categories using the U.S. Current Population Survey (CPS) March Social and Economic Supplements, combined over 2010-2018. White corresponds to those reporting their race as White only; Non-White corresponds to all other survey respondents. Shaded regions represent confidence intervals (5%-95%) estimated from 1000 bootstrap samples in which households in each rae-income category are drawn randomly with replacement from the set of all CPS households. \\label{Income}")}
+```{r resample-CPS-income-race, echo=FALSE,  message = FALSE, warning = FALSE, dev = c("png", "pdf"),dpi=300,fig.cap= paste("**Total Fertility ($xTFR$) by race and household income level.** We estimate TFR from age-sex distributions within race-income categories using the U.S. Current Population Survey (CPS) March Social and Economic Supplements, combined over 2010-2018. White corresponds to those reporting their race as White only; Non-White corresponds to all other survey respondents. Shaded regions represent confidence intervals (5%-95%) estimated from 1000 bootstrap samples in which households in each race-income category are drawn randomly with replacement from the set of all CPS households. \\label{Income}")}
 
 ## the plot is generated in advance 
 ## by make-CPS-income-race-plot.R
@@ -754,69 +754,69 @@ Because they rely on basic, commonly collected census data the parameter-free, s
 # Replication Files
 All data and code necessary to reproduce the reported results are licensed under the CC-BY-4.0 license and are publicly available in a replication repository located at (https://github.com/mathewhauer/iTFR-replication). The analyses were performed in *R* [@rcite]. For the $bTFR$ variant we use the *rstan* package [@rstanpackage] to inferface with Stan [@stanjss2017].
 
-\newpage
-# Supplementary material {-}
+<!-- \newpage -->
+<!-- # Supplementary material {-} -->
 
-\beginsupplement
-
-
-```{r make-table-hfd-countries, echo=FALSE, warning=FALSE, message = FALSE, results='asis'}
-# options(knitr.kable.NA = '')
-hfdcountries <- tribble(
-  ~Code, ~Country,
-  "AUT", "Austria",
-  "BGR", "Bulgaria",
-  "BLR", "Belarus",
-  "CAN", "Canada",
-  "CHL", "Chile",
-  "HRV", "Croatia",
-  "CZE", "Czechia",
-  "DEN", "Denmark",
-  "EST", "Estonia",
-  "FIN", "Finland",
-  "FRATNP", "France",
-  "DEUTNP", "Germany",
-  "HUN", "Hungary",
-  "ISL", "Iceland",
-  "ITA", "Italy",
-  "JPN", "Japan",
-  "LTU", "Lithuania",
-  "NLD", "Netherlands",
-  "NOR", "Norway",
-  "POL", "Poland",
-  "PRT", "Portugal",
-  "RUS", "Russia",
-  "SVK", "Slovakia",
-  "SVN", "Slovenia",
-  "ESP", "Spain",
-  "SWE", "Sweden",
-  "CHE", "Switzerland",
-  "TWN", "Taiwan",
-  "UKR", "Ukraine",
-  "GBRTENW", "England and Wales",
-  "GBR_NIR", "Northern Ireland",
-  "GBR_SCO", "Scotland",
-  "USA", "USA"
-)
+<!-- \beginsupplement -->
 
 
-hmdtab <- HFD_tfr  %>%
-  group_by(Code) %>%
-  dplyr::summarise(Start = min(Year),
-                   End = max(Year),
-                   yearlength = n()) %>%
-  left_join(., hfdcountries)
-hmdtab2 <- hmdtab %>%
-  mutate(`Data Avail. (# of Years)` = paste0(Start, "-", End, " (", yearlength,")")) %>%
-  dplyr::select(Country,`Data Avail. (# of Years)` )
+<!-- ```{r make-table-hfd-countries, echo=FALSE, warning=FALSE, message = FALSE, results='asis'} -->
+<!-- # options(knitr.kable.NA = '') -->
+<!-- hfdcountries <- tribble( -->
+<!--   ~Code, ~Country, -->
+<!--   "AUT", "Austria", -->
+<!--   "BGR", "Bulgaria", -->
+<!--   "BLR", "Belarus", -->
+<!--   "CAN", "Canada", -->
+<!--   "CHL", "Chile", -->
+<!--   "HRV", "Croatia", -->
+<!--   "CZE", "Czechia", -->
+<!--   "DEN", "Denmark", -->
+<!--   "EST", "Estonia", -->
+<!--   "FIN", "Finland", -->
+<!--   "FRATNP", "France", -->
+<!--   "DEUTNP", "Germany", -->
+<!--   "HUN", "Hungary", -->
+<!--   "ISL", "Iceland", -->
+<!--   "ITA", "Italy", -->
+<!--   "JPN", "Japan", -->
+<!--   "LTU", "Lithuania", -->
+<!--   "NLD", "Netherlands", -->
+<!--   "NOR", "Norway", -->
+<!--   "POL", "Poland", -->
+<!--   "PRT", "Portugal", -->
+<!--   "RUS", "Russia", -->
+<!--   "SVK", "Slovakia", -->
+<!--   "SVN", "Slovenia", -->
+<!--   "ESP", "Spain", -->
+<!--   "SWE", "Sweden", -->
+<!--   "CHE", "Switzerland", -->
+<!--   "TWN", "Taiwan", -->
+<!--   "UKR", "Ukraine", -->
+<!--   "GBRTENW", "England and Wales", -->
+<!--   "GBR_NIR", "Northern Ireland", -->
+<!--   "GBR_SCO", "Scotland", -->
+<!--   "USA", "USA" -->
+<!-- ) -->
 
-hmdtab2[nrow(hmdtab2)+1,] <- ""
 
-dd2 <- cbind(hmdtab2[1:16, ], hmdtab2[17:32, ])
+<!-- hmdtab <- HFD_tfr  %>% -->
+<!--   group_by(Code) %>% -->
+<!--   dplyr::summarise(Start = min(Year), -->
+<!--                    End = max(Year), -->
+<!--                    yearlength = n()) %>% -->
+<!--   left_join(., hfdcountries) -->
+<!-- hmdtab2 <- hmdtab %>% -->
+<!--   mutate(`Data Avail. (# of Years)` = paste0(Start, "-", End, " (", yearlength,")")) %>% -->
+<!--   dplyr::select(Country,`Data Avail. (# of Years)` ) -->
 
-kable(dd2, "latex", booktabs = T, caption = "\\label{HFDCountries}\\textbf{Human Fertility Database Countries and years of data availability.}") %>%
-  kable_styling(latex_options = "HOLD_position")
-  
-```
+<!-- hmdtab2[nrow(hmdtab2)+1,] <- "" -->
 
-\newpage
+<!-- dd2 <- cbind(hmdtab2[1:16, ], hmdtab2[17:32, ]) -->
+
+<!-- kable(dd2, "latex", booktabs = T, caption = "\\label{HFDCountries}\\textbf{Human Fertility Database Countries and years of data availability.}") %>% -->
+<!--   kable_styling(latex_options = "HOLD_position") -->
+
+<!-- ``` -->
+
+<!-- \newpage -->
